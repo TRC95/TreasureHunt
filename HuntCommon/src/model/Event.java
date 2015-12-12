@@ -1,23 +1,18 @@
 package model;
 
-import java.util.List;
-
 /**
  * Created by 1 on 12/12/2015.
  */
 public interface Event {
 
-    Admin getOrganizer();
-    Integer getHintCount();
-    Hint getHintById(Integer id);
-    String getStatus();
-    List<Hint> getAllHints();
-    Integer getTax();
+    public Admin getOrganizer();
+    public Integer getHintCount();
+    public String getStatus();
+    public Integer getTax();
 
-    void setStatus();
-    void setHints(List<Hint> hints);
-    void addHint(Hint hint);
-    void changeStatus(int status);
-    void setTax(Integer taxValue);
+    public void setOrganizer(Admin organizer);
+    public void setStatus(String status);
+    public void setHintCount(Integer hintCount);
+    public void setTax(Integer taxValue);
 
 }
